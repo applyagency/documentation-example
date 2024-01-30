@@ -1,5 +1,8 @@
 name: Build and Deploy Github Pages
-on: push
+on:
+  push:
+    branches:
+      - main
 jobs:
   install-dependencies:
     runs-on: ubuntu-latest
