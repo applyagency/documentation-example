@@ -1,8 +1,9 @@
 name: Build and Deploy Github Pages
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
 jobs:
   install-dependencies:
     runs-on: ubuntu-latest
