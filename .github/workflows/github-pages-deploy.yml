@@ -7,11 +7,11 @@ on:
 jobs:
   install-dependencies:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Checkout 🛎️
-        - uses: actions/checkout@v3
-          with:
-            persist-credentials: false
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
       - name: Install 🔋
         run: npm ci
   build-and-deploy-storybook:
@@ -33,9 +33,9 @@ jobs:
     steps:
       - name: Install 🔋
         uses: actions/setup-node@v3
-          with:
-            node-version: 18
-          run: npx playwright install --with-deps
+        with:
+          node-version: 18
+        run: npx playwright install --with-deps
       - name: Test 🧪
         run: npx playwright test
       - name: Deploy 🚀
