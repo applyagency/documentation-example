@@ -31,10 +31,11 @@ jobs:
   test-and-deploy-playwright:
     runs-on: ubuntu-latest
     steps:
-      - name: Install 🔋
+      - name: Setup Node 🛎️
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install 🔋
         run: npx playwright install --with-deps
       - name: Test 🧪
         run: npx playwright test
